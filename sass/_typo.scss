@@ -1,0 +1,49 @@
+.text {
+  line-height: lineH(34, 18);
+  &--big {
+    font-size: 24px;
+    margin-bottom: 65px;
+  }
+  @include maxw(1023px) {
+    &--big {
+      font-size: 20px;
+      margin-bottom: 45px;
+    }
+  }
+  @include maxw(767px) {
+    font-size: 14px;
+    &--big {
+      margin-bottom: 25px;
+    }
+  }
+}
+.caption {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: linear-gradient(to right, #f475a0, #feac3d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 35px;
+  @include maxw(767px) {
+    margin-bottom: 25px;
+  }
+}
+.heading {
+  font-size: 36px;
+  font-weight: 800;
+  color: white;
+  line-height: lineH(56, 36);
+  margin-bottom: 30px;
+  &--big {
+    font-size: 60px;
+    font-family: $secondary-font;
+    margin-bottom: 50px;
+  }
+  @include maxw(1023px) {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  @include maxw(767px) {
+    font-size: 24px;
+  }
+}

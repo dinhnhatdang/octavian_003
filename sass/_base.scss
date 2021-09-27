@@ -1,0 +1,89 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 18px;
+  line-height: 1;
+  color: $gray-light;
+  background-color: $gray-darker;
+  overflow-x: hidden;
+}
+h2,
+h3,
+h1,
+h4 {
+  font-family: $secondary-font;
+}
+
+a {
+  color: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: $primary-font;
+  font-size: 14px;
+  outline: none;
+  border: 0;
+}
+input {
+  line-height: normal;
+}
+section[id] {
+  scroll-margin-top: 100px;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: url(../images/img1.jpg) no-repeat top/100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.second-font {
+  font-family: $secondary-font;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: $primary-font;
+  height: 55px;
+  padding: 0 70px;
+  border-radius: 6px;
+  &--primary {
+    background-color: $blue;
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: $gray-light;
+    }
+  }
+  &--secondary {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #f475a0, #feac3d);
+    transition: all 0.2s linear;
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  @include maxw(767px) {
+    font-size: 12px;
+    height: 40px;
+    padding: 0px 50px;
+  }
+}

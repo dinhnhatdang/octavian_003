@@ -1,0 +1,70 @@
+.feature {
+  padding: 150px 0px 150px;
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px 30px;
+  }
+  &-item {
+    background-color: $gray-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 65px 40px;
+  }
+  &-icon {
+    margin-bottom: 35px;
+  }
+  &-title {
+    color: white;
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  @include maxw(1599px) {
+    padding: 100px 0 100px;
+  }
+  @include maxw(1023px) {
+    &-main {
+      display: grid;
+      grid-template-columns: unset;
+      justify-content: flex-start;
+      overflow-x: auto;
+      overflow-y: hidden;
+      grid-auto-columns: 400px; //set size for column
+      grid-auto-flow: column;
+      -webkit-overflow-scrolling: touch;
+      grid-gap: 0 30px;
+      /* Hide scrollbar for IE, Edge and Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  @include maxw(767px) {
+    padding: 60px 0px 50px;
+    &-main {
+      grid-auto-columns: 250px; //set size for column
+      grid-gap: 0 20px;
+    }
+    &-item {
+      padding: 20px 20px;
+    }
+    &-icon {
+      margin-bottom: 20px;
+      img {
+        max-width: 70px;
+      }
+    }
+    &-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+}

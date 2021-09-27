@@ -1,0 +1,68 @@
+.hero {
+  padding: 270px 0px 380px;
+  color: white;
+
+  &-heading {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 120px;
+    margin-bottom: 15px;
+  }
+  &-caption {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+  &-video {
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+@include maxw(1599px) {
+  .hero {
+    padding: 200px 0px 270px;
+  }
+}
+@include maxw(1279px) {
+  .hero {
+    padding: 95px 0px;
+  }
+}
+@include maxw(1023px) {
+  .hero {
+    padding: 72px 0px;
+    &-heading {
+      font-size: 80px;
+    }
+    &-caption {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+    &-video img {
+      max-width: 40px;
+    }
+  }
+}
+@include maxw(767px) {
+  .hero {
+    padding: 20px 0px;
+    &-heading {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+    &-caption {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+    &-video {
+      gap: 0 8px;
+      font-size: 12px;
+    }
+    &-video img {
+      max-width: 30px;
+    }
+  }
+}

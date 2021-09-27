@@ -1,0 +1,90 @@
+.header {
+  //Always show header
+  position: sticky;
+  top: 0;
+  background: url(../images/img1.jpg) no-repeat;
+  z-index: 100;
+
+  //-------------x---------------
+
+  color: white;
+  border-bottom: 1px solid rgba(white, 0.3);
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+  @include maxw(1599px) {
+    &-main {
+      padding: 20px 0;
+    }
+  }
+
+  &-tool {
+    display: flex;
+    align-items: center;
+    gap: 0px 50px;
+  }
+  @include maxw(767px) {
+    &-tool {
+      gap: 0px 35px;
+    }
+    &-tool img {
+      max-width: 20px;
+    }
+  }
+
+  .menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 0px 50px;
+    }
+    @include minw(1023px) {
+      &-close {
+        display: none;
+      }
+      &-phone {
+        display: none;
+      }
+    }
+    @include maxw(1023px) {
+      position: fixed;
+      background-color: white;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 200px;
+      color: $gray-dark;
+      &-list {
+        flex-direction: column;
+        padding-top: 60px;
+        padding-left: 10px;
+        align-items: unset;
+      }
+      &-link {
+        display: block;
+        width: 100%;
+        padding: 20px 20px;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: all 0.2s linear;
+        &:hover {
+          background: linear-gradient(to right, #f475a0, #feac3d);
+        }
+      }
+      &-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 30px;
+      }
+      &-phone p {
+        font-size: 15px;
+        padding: 5px 0;
+      }
+    }
+  }
+}
